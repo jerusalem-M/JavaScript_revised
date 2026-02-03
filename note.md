@@ -92,3 +92,38 @@ class Person {
   }
 }
 
+
+
+
+Hoisting in Simple Terms
+Imagine you are reading a book. Usually, you have to meet a character on page 1 before you can understand what they are doing on page 10.
+
+Hoisting is like JavaScript reading the whole book before you do. It finds all the "characters" (functions and variables) and moves them to the "Introduction" (the top of the code) in its own memory. This allows you to call a function on line 1, even if you didn't actually write it until line 50.
+
+The "Short Note" Cheat Sheet
+📌 JavaScript Hoisting Quick Reference
+1. Function Declarations (The "Full" Hoist)
+
+Behavior: Both the name and the function body are moved to the top.
+
+Result: You can call these functions before they appear in the code.
+
+Example: sayHi(); function sayHi() { console.log("Hi"); } ✅ Works
+
+2. Variable Declarations (var)
+
+Behavior: Only the declaration is hoisted, not the value.
+
+Result: If you use it before defining it, you get undefined.
+
+Example: console.log(x); var x = 5; ➡️ Output: undefined
+
+3. Variables (let & const) and Arrow Functions
+
+Behavior: They are technically hoisted but placed in a "Temporal Dead Zone."
+
+Result: You cannot use them before they are defined.
+
+Example: console.log(y); let y = 10; ❌ Reference Error
+
+
